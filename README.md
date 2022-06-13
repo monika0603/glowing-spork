@@ -5,4 +5,6 @@ This repository is dedicated to Python data structures and algorithms for learni
 **What is a graph?**
 Graph = Nodes + Edges 
 
+![alt text](https://github.com/monika0603/glowing-spork/blob/main/graphs/graph.png)
+
 Where a, b, c, d, e, and f are nodes and edges are the connections between the nodes. Nodes are vertices are interchangeably used. There can be many edges between the nodes. 
