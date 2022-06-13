@@ -14,6 +14,10 @@ Conside this graph, implemented in the code below (arrows are pointing down):
     B       C
    / \       \
   D    E---> F
+
+Time complexity: Since all the nodes and vertices are visited, the average time complexity for 
+DFS on a graph is O(V+E), where E is the number of vertices and E is the number of edges. In case 
+of DFS on a tree, the time complexity is O(V), where V is the number of nodes. 
 """
 
 graph = {
@@ -37,5 +41,4 @@ def dfs(visited, graph, node):
     return visited
 
 # driver code
-print(dfs(visited, graph, 'A'))
-
+dfs(visited, graph, 'A')
