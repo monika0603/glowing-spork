@@ -6,7 +6,7 @@ This repository is dedicated to Python data structures and algorithms for learni
 
 Graph = Nodes + Edges 
 
-![alt text](https://github.com/monika0603/glowing-spork/blob/main/graphs/graph.png | width=100)
+![alt text](https://github.com/monika0603/glowing-spork/blob/main/graphs/graph.png =250x250)
 
 Where a, b, c, d, e, and f are <ins> nodes </ins> and <ins> edges </ins> are the connections between the nodes. Nodes are vertices are interchangeably used. There can be many edges between the nodes. 
 
