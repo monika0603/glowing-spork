@@ -6,7 +6,7 @@ This repository is dedicated to Python data structures and algorithms for learni
 
 Graph = Nodes + Edges 
 
-![alt text](https://github.com/monika0603/glowing-spork/blob/main/graphs/graph.png)
+![alt text](https://github.com/monika0603/glowing-spork/blob/main/graphs/graph.png | width=100)
 
 Where a, b, c, d, e, and f are <ins> nodes </ins> and <ins> edges </ins> are the connections between the nodes. Nodes are vertices are interchangeably used. There can be many edges between the nodes. 
 
@@ -20,4 +20,4 @@ Cyclic and acyclic are also known as directed and undirected, respectively. Howe
 
 **Breadth First Traversal**
 
-A BFS traversal will explore nodes in all the directions evenly. As show here ![alt text](https://github.com/monika0603/glowing-spork/blob/main/graphs/BFS.png)
+A BFS traversal will explore nodes in all the directions evenly. As show here ![alt text](https://github.com/monika0603/glowing-spork/blob/main/graphs/BFS.png | width=100)
