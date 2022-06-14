@@ -17,3 +17,7 @@ Graphs can be cyclic and/or acyclic where:
 <ins> acyclic </ins>  = Where there is no such path. Or in other words there is only a certain direction to follow. 
 
 Cyclic and acyclic are also known as directed and undirected, respectively. However, graphs can have cycle as well as a specific direction within it's nodes. 
+
+**Breadth First Traversal**
+
+A BFS traversal will explore nodes in all the directions evenly. As show here ![alt text](
