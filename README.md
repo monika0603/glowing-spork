@@ -1,6 +1,6 @@
 # Python Data Structures & Algorithms
 
-This repository is dedicated to Python data structures and algorithms for learning purposes. This youtube video (https://www.youtube.com/watch?v=tWVWeAqZ0WU) is an awesome resource to learn graph algorithms specifically. 
+This repository is dedicated to Python data structures and algorithms for learning purposes. This youtube video (https://www.youtube.com/watch?v=tWVWeAqZ0WU) by Alvin Zablan is an awesome resource to learn graph algorithms specifically. Alvin explains the approach to a problem fluently and makes graph solution implementation like a piece of cake. 
 
 **What is a graph?**
 
