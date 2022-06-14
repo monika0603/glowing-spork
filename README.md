@@ -20,4 +20,4 @@ Cyclic and acyclic are also known as directed and undirected, respectively. Howe
 
 **Breadth First Traversal**
 
-A BFS traversal will explore nodes in all the directions evenly. As show here ![alt text](
+A BFS traversal will explore nodes in all the directions evenly. As show here ![alt text](https://github.com/monika0603/glowing-spork/blob/main/graphs/BFS.png)
