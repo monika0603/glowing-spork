@@ -24,9 +24,12 @@ def longest_path(graph):
             # Terminal nodes are zero distance from themselves
             distance[node] = 0
 
+    # Now that our terminal nodes have been identified, we traverse throgh each node 
+    # again to calculate the distance 
     for node in graph:
         traverse_distance(graph, node, distance)
 
+    # Simply return the maximum distance stored in the distance dictionary
     return max(distance.values())
 
 def traverse_distance(graph, node, distance):
@@ -40,6 +43,7 @@ def traverse_distance(graph, node, distance):
         attempt = traverse_distance(graph, neighbor, distance) 
         max_length = max(attempt, max_length)
 
+    # Incrementing the distance for each node
     distance[node] = 1 + max_length
 
     return distance[node]
