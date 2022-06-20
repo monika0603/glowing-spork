@@ -44,6 +44,15 @@ No, graph representations are diverse. We can have edge-lists, adjacency-lists, 
 
 ----------------------------------------------------------------------------------------------------------------------------
 
-**What are binary trees?**
+**What is a tree?**
 
+* Tree has a root node, and bears a parent child relationship between different nodes 
+* Root node has no parent. While leaf nodes have no children. 
+
+**What is a binary tree?**
+
+* A binary tree is a tree where every child has atmost two children 
+* A node in a binary tree could have less than two children 
+* Has exactly one root node
+* exactly one path between root and any node
 
