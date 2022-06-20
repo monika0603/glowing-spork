@@ -41,3 +41,9 @@ A graph data structure may not have a node, and there maybe multiple paths betwe
 **Is an adjacency list the only way to implement a graph?** 
 
 No, graph representations are diverse. We can have edge-lists, adjacency-lists, grid-graphs etc. 
+
+----------------------------------------------------------------------------------------------------------------------------
+
+**What are binary trees?**
+
+
