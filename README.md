@@ -33,3 +33,11 @@ BFS is implemented iteratively and DFS is implemented recursively. The reason fo
 In a graph, any position can be accessed using (row, col) and any position will at least have four neighbors. Up, down, left and right directions. Let's say we are at a position (r,c), and if we wanted to go up we are reducing the row by one, so up direction will be represented by (r-1,c). Similarly, if we wanted to go down we are increasing the row, so incrementing r by will give the down neighbor (r+1,c). Likewise, if wanted a neighbor to the right, we'd increment the col position by one, (r, c+1) and left will be represented by (r, c-1). These are the four direction shown in the diagram below. 
 
 ![alt text](https://github.com/monika0603/glowing-spork/blob/main/graphs/graph_matrix.png)
+
+**What is the difference between a graph and tree?**
+
+A graph data structure may not have a node, and there maybe multiple paths between nodes. However, in a tree there is a single unique path between two nodes. 
+
+**Is an adjacency list the only way to implement a graph?** 
+
+No, graph representations are diverse. We can have edge-lists, adjacency-lists, grid-graphs etc. 
