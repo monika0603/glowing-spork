@@ -45,7 +45,7 @@ def _min_change(amount, coins, memo):
     if amount == 0:
         return 0 
     if amount < 0:
-        return float("-inf")
+        return float("inf")
 
     min_coins = float("inf")
     for coin in coins:
@@ -55,8 +55,12 @@ def _min_change(amount, coins, memo):
     memo[amount] = min_coins
     return min_coins
 
+# Test case 01
+amount = 8 
+coins = [1,5,4,12]
+print(min_change_optimized(amount, coins)) 
+
 # Test case 02 
-# 
 amount = 271
 coins = [10, 8, 265, 24]
 print(min_change_optimized(amount, coins))
