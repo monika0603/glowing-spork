@@ -38,6 +38,28 @@ def _max_palin_subsequence(s, i, j):
         return max(_max_palin_subsequence(s, i, j-1), 
                    _max_palin_subsequence(s, i+1, j))
 
+# Optimized solution using memoization
+def max_palin_subsequence_memo(s):
+    return _max_palin_subsequence_memo(s, 0, (len(s)-1), {})
+
+def _max_palin_subsequence_memo(s, i, j, memo):
+    key = (i,j)
+    if key in memo:
+        return memo[key]
+
+    if i == j:
+        return 1 
+    if i > j:
+        return 0 
+
+    if s[i] == s[j]:
+        memo[key] = 2 + _max_palin_subsequence_memo(s, i+1, j-1, memo)
+    else:
+        memo[key] = max(_max_palin_subsequence_memo(s, i+1, j, memo), 
+        _max_palin_subsequence_memo(s, i, j-1, memo))
+    return memo[key]
+
+
 # Driver code
 # Test case 01
 s = "luwxult"
@@ -58,3 +80,11 @@ print(max_palin_subsequence(s))
 # Test case 05
 s = "chartreusepugvicefree"
 print(max_palin_subsequence(s))
+
+# Test case 06
+s = "qwueoiuahsdjnweuueueunasdnmnqweuzqwerty"
+print(max_palin_subsequence_memo(s))
+
+# Test case 07 
+s = "enamelpinportlandtildecoldpressedironyflannelsemioticsedisonbulbfashionaxe"
+print(max_palin_subsequence_memo(s))
