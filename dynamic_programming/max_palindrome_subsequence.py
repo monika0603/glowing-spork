@@ -17,7 +17,7 @@ String = lxuul
                                                       0 /    \ 0
                                                       u        x
 """ 
-
+# Brute force solution without using memoization
 def max_palin_subsequence(s):
     # Staring with the first and last index to compare them
     return _max_palin_subsequence(s, 0, (len(s)-1)) 
@@ -32,7 +32,7 @@ def _max_palin_subsequence(s, i, j):
     # If the two characters match, then I want to recurssively call the function 
     # by incrementing i and decrementing j
     if s[i] == s[j]:
-        return 1 + _max_palin_subsequence(s, i+1, j-1)
+        return 2 + _max_palin_subsequence(s, i+1, j-1)
     # Otherwise pick the larger return value between the left and right
     else:
         return max(_max_palin_subsequence(s, i, j-1), 
@@ -41,5 +41,20 @@ def _max_palin_subsequence(s, i, j):
 # Driver code
 # Test case 01
 s = "luwxult"
-print(len(s)-1)
+print(max_palin_subsequence(s))
+
+# Test case 02
+s = "xyzaxxzy"
+print(max_palin_subsequence(s))
+
+# Test case 03
+s = "lol"
+print(max_palin_subsequence(s))
+
+# Test case 04
+s = "boabcdefop"
+print(max_palin_subsequence(s))
+
+# Test case 05
+s = "chartreusepugvicefree"
 print(max_palin_subsequence(s))
