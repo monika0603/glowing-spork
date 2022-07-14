@@ -50,7 +50,7 @@ def _quickest_concat_memo(s, words, memo):
             min_words = min(attempt, min_words)
             memo[s] = min_words 
 
-    return memo[s]
+    return min_words
 
 # Driver code
 # Test case #1
@@ -81,4 +81,4 @@ print(quickest_concat_memo(s, words))
 # Test case #6
 s = 'simchacindy'
 words = ['sim', 'simcha', 'acindy', 'ch']
-print(quickest_concat(s, words))
+print(quickest_concat_memo(s, words))
