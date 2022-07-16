@@ -27,6 +27,7 @@ def tree_value_count(node, target):
             queue.append(current.right)
 
     return count 
+
 a = Node(12)
 b = Node(6)
 c = Node(6)
