@@ -1,5 +1,9 @@
 """ 
 Depth-first-print of a graph
+
+Time complexity for DFS/BFS is O(n) where n = number of nodes in the graph
+deque or pop using O(1)/constant time complexity. O(n) time complexity comes 
+from the while loop when we are interating over the stack/deque DS. 
 """
 
 graph = { 
@@ -44,6 +48,7 @@ def breadth_first_search(graph, start):
     queue = deque([start])
 
     while queue:
+        # popleft runs in O(1) time
         current = queue.popleft()
         print(current)
 
