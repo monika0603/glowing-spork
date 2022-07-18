@@ -34,5 +34,22 @@ def depth_first_search(graph, current):
     for neighbor in graph[current]:
         depth_first_search(graph, neighbor)
 
+# Breadth-first-traversal for a graph
+from collections import deque
+def breadth_first_search(graph, start):
+    # Using a deque DS in Python to efficiently get the first element of the list 
+    # If simply chop off the first element of a simple list, then the entire list needs 
+    # to be shifted to the left to reduce the length. Which makes is inefficient.
+    # Whereas deque is a double-ended DS in python so we can efficiently chop off either ends.  
+    queue = deque([start])
+
+    while queue:
+        current = queue.popleft()
+        print(current)
+
+        for neighbor in graph[current]:
+            queue.append(neighbor)
+
 print(depth_first_print(graph, "a"))
 print(depth_first_search(graph, "a"))
+print(breadth_first_search(graph, "a"))
