@@ -25,4 +25,14 @@ def depth_first_print(graph, start):
         for neighbor in graph[current]: 
             stack.append(neighbor)
 
+# Now instead of explicitly using a stack we can use a recursive function to call an 
+# underlying stack
+# Notice that the output is different in the below case
+def depth_first_search(graph, current):
+    print(current)
+
+    for neighbor in graph[current]:
+        depth_first_search(graph, neighbor)
+
 print(depth_first_print(graph, "a"))
+print(depth_first_search(graph, "a"))
