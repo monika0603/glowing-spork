@@ -5,7 +5,7 @@ together to form the string.
 
 You may reuse words of the list as many times as needed.
 """
-
+# Brute force solution, using plain recursion
 def can_concat(s, words):
     return _can_concat(s, words)
 
@@ -21,6 +21,9 @@ def _can_concat(s, words):
                 return True 
 
     return False 
+
+# Optimized solution solution, using memoization
+
 
 # Driver code 
 # Test case 01
