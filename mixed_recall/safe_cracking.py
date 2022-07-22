@@ -13,25 +13,27 @@ combination that will unlock the safe. The function should return a string repre
 import collections 
 
 def topological_order(graph):
-  num_parents = {}
-  for node in graph:
-    num_parents[node] = 0
+    nums_parents = {}
+    for node in graph:
+        nums_parents[node] = 0 
+
+    for node in graph:
+        for child in graph[node]:
+            nums_parents[child] += 1 
+
+    ready = [node for node in nums_parents if nums_parents[node] == 0]
     
-  for node in graph:
-    for child in graph[node]:
-      num_parents[child] += 1
-  
-  ready = [ node for node in graph if num_parents[node] == 0 ]
-  order = []
-  while ready:
-    node = ready.pop()
-    order.append(node)
-    for child in graph[node]:
-      num_parents[child] -= 1
-      if num_parents[child] == 0:
-        ready.append(child)
-    
-  return order
+    order = []
+    while ready:
+        node = ready.pop()
+        order.append(str(node))
+
+        for child in graph[node]:
+            nums_parents[child] -= 1
+            if nums_parents[child] == 0:
+                ready.append(child) 
+
+    return "".join(order)
 
 
 def safe_cracking(edges):
@@ -46,13 +48,15 @@ def safe_cracking(edges):
 
     return topological_order(graph)
 
-    
+# Driver code
+# Test case 01   
 print(safe_cracking([
   (7, 1),
   (1, 8),
   (7, 8),
-]))
+])) # --> 718
 
+# Test case 02
 print(safe_cracking([
   (3, 1),
   (4, 7),
@@ -61,4 +65,23 @@ print(safe_cracking([
   (7, 3),
   (3, 5),
   (9, 1),
-]) )
+]) ) # --> 473591 
+
+# Test case 03 
+print(safe_cracking([
+  (2, 5),
+  (8, 6),
+  (0, 6),
+  (6, 2),
+  (0, 8),
+  (2, 3),
+  (3, 5),
+  (6, 5),
+])) # -> '086235'
+
+# Test case 04
+print(safe_cracking([
+  (0, 1),
+  (6, 0),
+  (1, 8),
+])) # -> '6018'
