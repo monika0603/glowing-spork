@@ -45,17 +45,27 @@ def explore(graph, node, visited, last_node):
 
     return True  
      
-
-
+# Driver code 
+# Test case 01 
 print(rare_routing(4, [
   (0, 1),
   (0, 2),
   (0, 3)
 ])) # -> True
 
+# Test case 02 
 print(rare_routing(4, [
   (0, 1),
   (0, 2),
   (0, 3),
   (3, 2)
 ])) # -> False
+
+# Test case 03 
+print(rare_routing(6, [
+  (1, 2),
+  (5, 4),
+  (3, 0),
+  (0, 1),
+  (0, 4),
+])) # -> True
