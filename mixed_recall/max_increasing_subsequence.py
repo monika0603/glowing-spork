@@ -30,6 +30,7 @@ def _max_increasing_subsequence(numbers, i, previous, memo):
         take_current = 1 + _max_increasing_subsequence(numbers, i+1, current, memo)
         options.append(take_current) 
 
+    # Whatever gets returned in the function gets stored in the memo dictionary
     memo[key] =  max(options)
     return memo[key]
 
